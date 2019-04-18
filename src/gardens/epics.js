@@ -5,7 +5,7 @@ import actions from "../gardens/constants"
 function* fetchGardens() {
     try {
        const gardens = yield getGardens()
-       yield put({type: actions.GARDENS_FETCHED, list: gardens });
+       yield put({type: actions.GARDENS_FETCHED, payload: gardens.data });
     } catch (e) {
        yield put({type: actions.GARDENS_FAILED, message: e.message});
     }
