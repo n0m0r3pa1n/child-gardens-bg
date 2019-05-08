@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import actions from "./constants"
 import * as PropTypes from 'prop-types'
 import Garden from "./Garden"
+import { ListItemsStyle } from "./GardensList.css";
+import Paper from '@material-ui/core/Paper';
 
 class GardensList extends Component {
 
@@ -16,9 +18,9 @@ class GardensList extends Component {
         );
 
         return (
-            <div>
+            <Paper zDepth={1} style={ListItemsStyle}>
                 {listItems}
-            </div>
+            </Paper>
         );
     }
 }
